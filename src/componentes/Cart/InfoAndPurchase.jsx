@@ -13,8 +13,8 @@ console.log(carrito)
 // validation states
 const [name, setName] = useState("")
 const [name2, setName2] = useState("")
-const [phone, setPhone] = useState(0)
-const [phone2, setPhone2] = useState(0)
+const [phone, setPhone] = useState("")
+const [phone2, setPhone2] = useState("")
 const [mail, setMail] = useState("")
 const [mail2, setMail2] = useState("")
 
@@ -22,11 +22,11 @@ const [buttonAvailability, setButtonAvailability] = useState(false)
 
 useEffect(() => {
     if(name === name2 & phone === phone2 & mail === mail2 ){
-        if(name === "" || phone === 0 || mail === ""){
-            setButtonAvailability(false)
-        }else{
-        setButtonAvailability(true)
-        console.log("funciono")}
+        if(name === "" || phone === "" || mail === ""){
+        setButtonAvailability(false)
+        console.log("funciono")
+    }else {setButtonAvailability(true)}
+    
     } else{
         setButtonAvailability(false)
         console.log("no funciono")     
@@ -142,7 +142,7 @@ const [activado, setActivado] = useState(true)
 
 <div className="col-md-3"> 
 <input 
-type="number" 
+type="text" 
 className="form-control"
 placeholder="Phone Number"
  name="phone"
@@ -187,7 +187,7 @@ onChange={(e)=> setMail(e.target.value)}
 
 <div className="col-md-3"> 
 <input 
-type="number" 
+type="text" 
 className="form-control"
 placeholder="Phone Number"
  name="phone"
@@ -214,7 +214,7 @@ onChange={(e) => setMail2(e.target.value)}>
             </div>
              } 
 { !buttonAvailability &&
-        <div>las casillas de validacion no coinciden o estan vacias </div>
+        <div className="red">las casillas de validacion no coinciden o estan vacias </div>
 
              }
         </form>

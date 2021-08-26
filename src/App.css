@@ -338,6 +338,7 @@ width: 25px;
 height: 25px;
 }
 
+
 /* fin de detail */
 /* --------Cart items-------- */
 .CartItemContainer{
@@ -367,6 +368,14 @@ height: 25px;
  .button-purchase{
    margin-left:20px;
 
+ }
+
+ /* form */
+ .red{
+
+margin-top: 10px;
+margin-bottom: 10px;  
+   color: red;
  }
 
 
