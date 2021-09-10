@@ -1,6 +1,7 @@
 import React, { useContext,  useEffect,  useState} from 'react'
 import {database} from "../../firebase/fireBase"
 import { Link } from 'react-router-dom'
+import InfoItem from './InfoItem'
 
 import { CartContext } from "../../context/CartContext"
 
@@ -9,6 +10,8 @@ const InfoAndPurchase = () => {
 
 const { carrito, totalPrice, clearCart} = useContext(CartContext)
 console.log(carrito)
+// context
+
 
 // validation states
 const [name, setName] = useState("")
@@ -221,13 +224,10 @@ onChange={(e) => setMail2(e.target.value)}>
 
 
 <h3>purchase info:</h3>
-{carrito.map((e) => {
+{carrito.map((p) => {
    
    return(
-       <div>
-   <div>{e.name}</div>
-   <div>each one {e.price}</div>
-        </div>
+    <InfoItem  name={p.name} price={p.price} amount={p.amount} img={p.img}  />
    
    )
 

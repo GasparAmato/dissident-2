@@ -22,7 +22,7 @@ const handlerOnClick  = () => {
 
         <button className="btn btn-primary button-delete" onClick={handlerOnClick} >Delete Item</button>
 
-        <Link to={`/${link}/${id}`}>
+        <Link to={`/categoria/${link}/${id}`}>
         <button className="btn btn-primary">Change Item</button>
         </Link>
             </div>

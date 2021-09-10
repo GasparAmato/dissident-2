@@ -27,6 +27,14 @@ return(
 <li>Contact</li>
 </Link>
 
+<Link to="/categoria/men" >
+<li>Men</li>
+</Link>
+
+<Link to="/categoria/women" >
+<li>Women</li>
+</Link>
+
 </ul>
 );
 };

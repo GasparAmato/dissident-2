@@ -74,7 +74,7 @@ return(
         <div className={[as, "Detail"].join(' ')} >
     
     <div className="detail-container-flex">
-        <Link to={`/${link}`} >
+        <Link to={`/categoria/${link}`} >
         <img className="exit" src={Exit} alt="salir" />
         </Link>
         

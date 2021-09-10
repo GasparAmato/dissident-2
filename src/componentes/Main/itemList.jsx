@@ -18,7 +18,7 @@ return(
                    
             {Lista.map((u) => {
                 return(
-                <Link className="link-deco-none" key={u.id} to={`/${u.link}/${u.id}`}>            
+                <Link className="link-deco-none" key={u.id} to={`/categoria/${u.link}/${u.id}`}>            
             <Item  id={u.id} name={u.name} img={u.img} price={u.price}/>
                 </Link>
             )

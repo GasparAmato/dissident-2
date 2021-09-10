@@ -12,7 +12,6 @@ import Logo from "./assets/img/logo-dissident.jpg";
 import imgcarrito from "./assets/img/icono_cart.jpg"
 
 import ItemListContainer from './componentes/Main/itemListContainer'
-import ItemListContainerMen from './componentes/Main/itemListContainerMen';
 import ItemDetailContainer from './componentes/Main/expandedItems/ItemDetailContainer';
 import AboutUs from './componentes/AboutUs/AboutUs';
 import Carrousel from './componentes/Main/carrusel/carrousel'
@@ -40,18 +39,15 @@ function App() {
        <Carrousel/>
       </Route>
 
-      <Route exact path="/women">
+      <Route exact path="/categoria/:category">
         <ItemListContainer/>
-      </Route>
-      <Route exact path="/men">
-        <ItemListContainerMen/>
       </Route>
 
       <Route exact path="/AboutUs">
         <AboutUs/>
       </Route>
       
-      <Route path="/:category/:id" >
+      <Route exact path="/categoria/:category/:id" >
     <ItemDetailContainer/>
      </Route>
      

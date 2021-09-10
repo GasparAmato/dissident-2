@@ -14,7 +14,7 @@ const Cart = () => {
         
         <Carousel>
         <Carousel.Item>
-           <Link to="/women">
+           <Link to="/categoria/women">
                <img
                  className=" img-carousel"
                 src={Women}
@@ -26,7 +26,7 @@ const Cart = () => {
            </Link>
          </Carousel.Item>
          <Carousel.Item>
-        <Link to="/men">
+        <Link to="/categoria/men">
           <img
             className="img-carousel"
             src={Men}
